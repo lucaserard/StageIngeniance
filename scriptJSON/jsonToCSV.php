@@ -15,6 +15,29 @@
 			}
 			
 		}
+		
+		public function setIntitule($title){
+			$this->intitule=utf8_encode($title);
+		}
+
+		public function setDescription($desc){
+			$this->description=utf8_encode($desc);
+		}
+
+		public function addProcess($processus){
+			if ($this->process!=="") {
+				$this->process=$this->process.", ".$processus;
+			}else{
+				$this->process=$processus;
+			}
+			$this->process=utf8_encode($this->process);
+		}
+
+
+		public function setListe($liste){
+			$this->liste=utf8_encode($liste);
+		}
+
 	}	
 
 	$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/Test JSON/trello.json');
@@ -31,14 +54,21 @@
 	$exportArray[]=array();
 	foreach ($stories as $story) {
 		$card=new Card();
-		$card->intitule=utf8_encode($story->{'name'});
-		$card->description=utf8_encode($story->{'desc'});
+		$card->setIntitule($story->{'name'});
+		$card->setDescription($story->{'desc'});
 		foreach ($story->{'labels'} as $label) {
-			$card->process=$card->process.", ".$label->{'name'};
+			$card->addProcess($label->{'name'});
 		}
 		$card->setPriorite();
+		$card->setListe($listsArray[$story->{'idList'}]);
 
-		$card->liste=$listsArray[$story->{'idList'}];
+		// $card->intitule=utf8_encode($story->{'name'});
+		// $card->description=utf8_encode($story->{'desc'});
+		// foreach ($story->{'labels'} as $label) {
+			// $card->process=$card->process.", ".$label->{'name'};
+		// }
+		// $card->process=utf8_encode($card->process);
+		// $card->liste=utf8_encode($listsArray[$story->{'idList'}]);
 
 		// var_dump($card);
 
@@ -49,7 +79,7 @@
 		fputs($fp, $bom =( chr(0xEF) . chr(0xBB) . chr(0xBF) ));
 		foreach ($exportArray as $line) {
 			$line = array_map("utf8_decode", $line);
-    		fputcsv($fp, $line);
+    		fputcsv($fp, $line,';');
 		}
 
 		fclose($fp);
