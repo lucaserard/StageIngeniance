@@ -7,6 +7,8 @@
 		private $process="";
 		private $priorite=0;
 		private $liste;
+		private $conditions="";
+		private $due;
 
 		public function setPriorite(){
 
@@ -16,6 +18,11 @@
 			
 		}
 		
+		public function setDue($date){
+			$this->due=$date;
+		}
+
+
 		public function setIntitule($title){
 			$this->intitule=utf8_encode($title);
 		}
@@ -33,9 +40,16 @@
 			$this->process=utf8_encode($this->process);
 		}
 
-
+		public function setConditions($conditions){
+			$this->conditions=utf8_encode($conditions);
+		}
+	
 		public function setListe($liste){
 			$this->liste=utf8_encode($liste);
+		}
+
+		public function getDue(){
+			return $this->due;
 		}
 
 		public function getIntitule(){
@@ -53,12 +67,17 @@
 		public function getPriorite(){
 			return $this->priorite;
 		}
+		public function getConditions(){
+			return $this->conditions;
+		}
 
 		public function getListe(){
 			return $this->liste;
 		}
 
-	}	
+	}
+
+
 
 	$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/Test JSON/trello.json');
 	$trello = json_decode($jsonPage);
@@ -83,7 +102,11 @@
 		$card->setListe($listsArray[$story->{'idList'}]);
 
 
-		$exportArray[]=array($card->getIntitule(),$card->getDescription(),$card->getProcess(),intval($card->getPriorite()),$card->getListe());
+		$card->setDue(substr($story->{'due'},0,10));
+
+		// var_dump($story->{'idChecklists'}[0]);
+		$card->setConditions(getConditionFromID($story->{'idChecklists'},$trello));
+		$exportArray[]=array($card->getIntitule(),$card->getDescription(),$card->getProcess(),intval($card->getPriorite()),$card->getListe(), $card->getConditions(), $card->getDue());
 
 	}
 
@@ -95,5 +118,30 @@
 	}
 
 	fclose($fp);
-		
+	
+
+
+	function getConditionFromID($id,$trello){
+		$checklists = $trello->{'checklists'};
+		$result="";
+		if(!empty($id)){
+			foreach ($checklists as $list) {
+				if ($list->{'id'}==$id[0]) {
+					$condList = $list->{'checkItems'};
+					$result=""; 
+					foreach ($condList as $cond) {
+						if ($result!=="") {
+							$result=$result."\n".$cond->{'name'}." : ".$cond->{'state'};
+						}else{
+							$result=$cond->{'name'}.$cond->{'state'};
+						}	
+					}
+				}
+			}
+		}	
+		return $result;
+
+	}
+
+
 ?>
