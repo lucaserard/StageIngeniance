@@ -1,5 +1,8 @@
 all: dia 
 
+php:
+	php scriptJSON/jsonToCSV.php
+
 dia: 
 	for dia in Process/*.dia; do\
 		if [ ! -e $${dia%%.*}.eps ]; then\
