@@ -1,0 +1,115 @@
+\documentclass[12pt,twoside]{scrreprt}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[francais]{babel, varioref}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{listingsutf8}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{afterpage}
+\usepackage[style=verbose-note,backend=bibtex]{biblatex}
+\usepackage{url}
+\usepackage[top=2.1cm,bottom=2.2cm,left=2cm,right=2cm]{geometry}
+\usepackage[final]{pdfpages}
+\usepackage{pslatex}
+\usepackage{rotating}
+
+
+
+% Pour sommaire cliquable 
+\usepackage{hyperref} % Créer des liens et des signets
+\hypersetup{
+colorlinks=true, %colorise les liens
+breaklinks=true, %permet le retour à la ligne dans les liens trop longs
+urlcolor= blue, %couleur des hyperliens
+linkcolor= black, %couleur des liens internes
+citecolor=black,  %couleur des références
+}
+
+% Fichier de bibliographie
+\bibliography{parties/biblio}
+
+\usepackage{templateIngeniance}
+\initINSA
+
+% Titre centre
+\renewcommand\titre{Tests de recrutement}
+\renewcommand\soustitre{Guide de rédaction}
+
+% Auteurs
+\date{Avril 2016}
+
+\author{Direction des opérations}
+
+\begin{document}
+
+
+\titleIngeniance{0}{}{0}{150}{220}{}
+% Remerciements
+% \input{parties/00-Contacts.tex}
+% \addcontentsline{toc}{chapter}{Contacts}
+
+% Sommaire
+\tableofcontents
+
+% Parties
+\chapter{Exemple1}
+
+\chapter{Exemple2}
+% Bibliographie
+%\bibliographystyle{plain}
+% \printbibliography
+
+% Annexes
+\clearpage
+% \appendix
+% \chapter{Annexes}
+% \input{parties/10-Annexe.tex}
+
+
+
+
+
+
+
+
+
+
+% \fancyfoot[CO]{
+% 	    \begin{picture}(0,0) 
+% 		\put(-56.7,-5){\includegraphics[width=49mm]{images/PiedDePage.pdf}}
+% 		\put(-55,-2.8){\begin{minipage}[b]{30mm}\begin{flushleft}\fontsize{14pt}{14pt}\selectfont 		 
+% 		\textbf{\textcolor{white}{ \thepage{} | \pageref*{LastPage} } }\end{flushleft}\end{minipage}}
+% 		\end{picture}}
+% 	\fancyfoot[CE]{
+% 	    \begin{picture}(0,0) 
+% 		\put(9,-5){\includegraphics[width=49mm]{images/PiedDePage2.pdf}}
+% 		\put(28,-2.8){\begin{minipage}[b]{30mm}\begin{flushright}\fontsize{14pt}{14pt}\selectfont 		 
+% 		\textbf{\textcolor{white}{ \thepage{} | \pageref*{LastPage} } }\end{flushright}\end{minipage}}
+% 		\end{picture}}
+
+
+% \fancyfoot[CO]{
+%     \begin{picture}(0,0) 
+% 	\put(-56.7,-5){\includegraphics[width=49mm]{images/PiedDePage.pdf}}
+% 	\put(-55,-2.8){\begin{minipage}[b]{30mm}\begin{flushleft}\fontsize{14pt}{14pt}\selectfont 		 
+% 	\textbf{\textcolor{white}{ \thepage{} | \pageref*{LastPage} } }\end{flushleft}\end{minipage}}
+% 	\end{picture}}
+% \fancyfoot[CE]{
+%     \begin{picture}(0,0) 
+% 	\put(9,-5){\includegraphics[width=49mm]{images/PiedDePage2.pdf}}
+% 	\put(28,-2.8){\begin{minipage}[b]{30mm}\begin{flushright}\fontsize{14pt}{14pt}\selectfont 		 
+% 	\textbf{\textcolor{white}{ \thepage{} | \pageref*{LastPage} } }\end{flushright}\end{minipage}}
+% 	\end{picture}}
+
+
+
+
+\end{document}
