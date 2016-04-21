@@ -3,12 +3,7 @@ all: dia tex
 tex:
 	pdflatex DocumentRH.tex
 	pdflatex DocumentRH.tex
-	rm *.aux
-	rm *.log	
-	rm *.out	
-	rm *.cb	
-	rm *.cb2
-	rm *.toc
+	-rm *.aux *.log *.out *.toc *.cb *.cb2
 dia: 
 	for dia in Diagrammes/*.dia; do\
 		if [ ! -e $${dia%%.*}.eps ]; then\

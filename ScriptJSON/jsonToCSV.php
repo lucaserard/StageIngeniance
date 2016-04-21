@@ -79,7 +79,8 @@
 
 
 
-	$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/Test JSON/trello.json');
+	//$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/StageIngeniance/ScriptJSON/trello.json');
+	$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/StageIngeniance/ScriptJSON/recrutement.json');	
 	$trello = json_decode($jsonPage);
 	
 	$lists = $trello->{'lists'};

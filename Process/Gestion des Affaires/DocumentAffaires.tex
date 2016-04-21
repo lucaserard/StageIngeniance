@@ -1,23 +1,41 @@
-\documentclass[a4paper,12pt]{report}
+\documentclass[12pt,chapterprefix=false]{scrreprt}
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-\usepackage[francais]{babel}
-\usepackage[top=3cm, bottom=2cm, left=3cm, right=2cm]{geometry}
-%\usepackage{layout}
-%\usepackage{fancyhdr}
-\usepackage{lastpage}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage[francais]{babel, varioref}
 \usepackage{graphicx}
-\usepackage{verbatim}
-%\usepackage{titlesec}
-\usepackage{ulem}
-\usepackage{setspace}
-\setlength{\parindent}{1,5cm}
-\frenchbsetup%
-{%
-StandardItemLabels=true,%
-ItemLabels=\ding{43},%
-}%
+\usepackage{listings}
+\usepackage{xspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{calc}
+\usepackage{listingsutf8}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{afterpage}
+% \usepackage[style=verbose-note,backend=bibtex]{biblatex}
+\usepackage{url}
+\usepackage[top=2.1cm,bottom=2.2cm,left=2cm,right=2cm]{geometry}
+\usepackage[final]{pdfpages}
+\usepackage{pslatex}
+\usepackage{rotating}
 
+\usepackage{$Ingeniance/Ressources/templateIngenianceCentralise}
+
+\author{Direction des Opérations}
+
+\renewcommand\titre{Processus Ingéniance}
+\renewcommand\soustitre{Gestion des affaires}
+\renewcommand*\thesection{\arabic{section}}
 \begin{document}
-%\input{Temps.tex}
+
+\initIngeniance
+
+
+\titleIngeniance{0}{}{0}{150}{220}{}
+
+
+\input{Affaires.tex}
 
 \end{document}
