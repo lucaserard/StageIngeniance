@@ -1,0 +1,36 @@
+Voici le dépot des projets Ingéniance.
+
+Pour faire fonctionner le programme de génération des documents de processus Ingéniance, vous aurez besoin :
+D'une installation Latex complète : paquet texlive-full
+Du logiciel Dia : paquet Dia
+
+
+Instructions :
+Vous devrez tout d'abord lancer le script bash config.sh, dont le rôle est simplement d'exporter une variable d'environnement pointant sur l'emplacement du dépot sur votre poste. Pour l'executer, utilisez chmod +x config.sh pour le rendre executable, puis ./config.sh pour le lancer.
+
+Vous pouvez ensuite compiler tous les fichiers à l'aide du Makefile présent, qui permet d'executer tous les makefile présent dans les sous dossiers. Il comporte également une option clean qui permet d'appeler l'option clean de tous les makefiles des sous dossiers.
+
+Process/Makefile : Il comporte 3 options
+			self : compile ProcessusIngeniance.tex et créée le fichier ProcessusIngeniance.pdf
+			general : appelle tous les makefile des sous dossiers, ce qui permet entre autres de compiler les fichiers de diagrammes.
+			clean : supprime les fichiers pdf dans le dossier courant et appelle les options clean des makefile des sous-dossiers.
+
+Lorsqu'aucune option n'est donnée, le makefile execute general puis self
+
+Makefile des sous dossiers : 3 options :
+			tex : Compile le fichier Latex
+			dia : compile les fichiers de diagrammes en PDF
+			clean : supprime les fichiers PDF du dossier et des diagrammes, plus les fichiers intermédiaires.
+all execute dia puis tex.
+
+
+
+
+		
+		
+
+
+			 
+
+
+
