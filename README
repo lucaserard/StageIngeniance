@@ -1,4 +1,4 @@
-Voici le dépot des projets Ingéniance.
+﻿Voici le dépot des projets Ingéniance.
 
 Pour faire fonctionner le programme de génération des documents de processus Ingéniance, vous aurez besoin :
 D'une installation Latex complète : paquet texlive-full
@@ -22,6 +22,8 @@ Makefile des sous dossiers : 3 options :
 			dia : compile les fichiers de diagrammes en PDF
 			clean : supprime les fichiers PDF du dossier et des diagrammes, plus les fichiers intermédiaires.
 all execute dia puis tex.
+
+Commit windows
 
 
 
