@@ -9,15 +9,22 @@
 		private $liste;
 		private $conditions="";
 		private $due;
+		private $id;
+		private $members;
 
 		public function setPriorite(){
 
 			while ( $this->priorite<=3 && (strpos($this->intitule, 'C'.intval($this->priorite)) == false)) {
 				$this->priorite++;	
 			}
+			if ($this->priorite>=4) {
+				$this->priorite=0;
+			}
+
 			
 		}
 		
+
 		public function setDue($date){
 			$this->due=$date;
 		}
@@ -33,7 +40,7 @@
 
 		public function addProcess($processus){
 			if ($this->process!=="") {
-				$this->process=$this->process.", ".$processus;
+				$this->process=$this->process."\n".$processus;
 			}else{
 				$this->process=$processus;
 			}
@@ -75,12 +82,35 @@
 			return $this->liste;
 		}
 
+		public function setID($_id){
+				$this->id=$_id;
+		}
+		public function getID(){
+			return $this->id;
+		}
+
+		public function addMember($_member){
+			if($this->members!=="") {
+				$this->members=$this->members."\n".$_member;
+			}else{
+				$this->members=$_member;
+			}
+			$this->members=utf8_encode($this->members);
+		}
+		public function getMembers(){
+			return $this->members;
+
+		}
+
+
+
+
 	}
 
 
 
 	//$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/StageIngeniance/ScriptJSON/trello.json');
-	$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/StageIngeniance/ScriptJSON/recrutement.json');	
+	$jsonPage = file_get_contents('/home/lucas/StageIngeniance/ScriptJSON/ERP.json');	
 	$trello = json_decode($jsonPage);
 	
 	$lists = $trello->{'lists'};
@@ -93,21 +123,33 @@
 
 	$exportArray[]=array();
 	foreach ($stories as $story) {
-		$card=new Card();
-		$card->setIntitule($story->{'name'});
-		$card->setDescription($story->{'desc'});
-		foreach ($story->{'labels'} as $label) {
-			$card->addProcess($label->{'name'});
+		if(!$story->{'closed'}){
+
+			$card=new Card();
+			$card->setIntitule($story->{'name'});
+			$card->setDescription($story->{'desc'});
+			$card->setID($story->{'idShort'});
+			foreach ($story->{'labels'} as $label) {
+				$card->addProcess($label->{'name'});
+			}
+			$card->setPriorite();
+			$card->setListe($listsArray[$story->{'idList'}]);
+
+
+			$card->setDue(substr($story->{'due'},0,10));
+
+			// var_dump($story->{'idChecklists'}[0]);
+			$card->setConditions(getConditionFromID($story->{'idChecklists'},$trello));
+
+			foreach ($story->{'idMembers'} as $member) {
+				$card->addMember(getMemberFromID($member,$trello));
+			}
+			// $card->addMembers(getMemberFromID($story->{'idMembers'},$trello));
+			
+
+
+			$exportArray[]=array(intval($card->getID()),$card->getIntitule(),$card->getDescription(),$card->getMembers(),$card->getProcess(),intval($card->getPriorite()),$card->getListe(), $card->getConditions(), $card->getDue());
 		}
-		$card->setPriorite();
-		$card->setListe($listsArray[$story->{'idList'}]);
-
-
-		$card->setDue(substr($story->{'due'},0,10));
-
-		// var_dump($story->{'idChecklists'}[0]);
-		$card->setConditions(getConditionFromID($story->{'idChecklists'},$trello));
-		$exportArray[]=array($card->getIntitule(),$card->getDescription(),$card->getProcess(),intval($card->getPriorite()),$card->getListe(), $card->getConditions(), $card->getDue());
 
 	}
 
@@ -132,11 +174,27 @@
 					$result=""; 
 					foreach ($condList as $cond) {
 						if ($result!=="") {
-							$result=$result."\n".$cond->{'name'}." : ".$cond->{'state'};
+							$result=$result."\n".$cond->{'name'};
 						}else{
-							$result=$cond->{'name'}.$cond->{'state'};
+							$result=$cond->{'name'};
 						}	
 					}
+				}
+			}
+		}	
+		return $result;
+
+	}
+
+
+
+	function getMemberFromID($id,$trello){
+		$members = $trello->{'members'};
+		$result="";
+		if(!empty($id)){
+			foreach ($members as $member) {
+				if ($member->{'id'}==$id) { 
+					$result=$member->{'fullName'};	
 				}
 			}
 		}	
