@@ -1,0 +1,153 @@
+\ProvidesPackage{templateIngeniance}[2016/04/17. v1 (Page de garde, header, footer). Lucas ERARD]
+
+% Marges
+\RequirePackage {geometry}
+\RequirePackage {fancyhdr}
+\RequirePackage {titlesec}
+
+% Images
+\RequirePackage {graphicx}
+\RequirePackage {color}
+\RequirePackage {epic,eepic}
+
+% Texte et calculs
+\RequirePackage {slantsc}
+\RequirePackage {calc}
+\RequirePackage {ifthen}
+\RequirePackage {lastpage}
+\RequirePackage {etoolbox}
+
+%\RequirePackage{pslatex} %Times font
+
+
+%\renewcommand\rmdefault{m}
+
+% Textes a redéfinir par l'user
+\newcommand\titre{\textbackslash titre}
+\newcommand\soustitre{\textbackslash soustitre}
+
+% % HEADER & FOOTER
+
+\newcommand{\parttitle}{}
+\newcommand{\chaptertitle}{}
+\renewcommand{\footrulewidth}{1pt}
+\setlength{\unitlength}{1mm}
+
+\setlength{\headsep}{1.5cm}
+\setlength{\footskip}{1.5cm}
+\setlength{\textheight}{24.7cm}
+
+% Section style
+
+\definecolor{INGENIANCE_PINK}{cmyk}{0,0.709,0.614,0.137}
+\titleformat{\section}{\normalfont\Large\bfseries\color{INGENIANCE_PINK}}{\thesection }{0.5em}{}
+\titlespacing{\section}{0pt}{20pt}{20pt}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{gray}}{\thesubsection }{0.5em}{}
+
+% style fancy
+
+
+\fancyhead[L]{\includegraphics[scale=0.6]{./images/Entete.png}}
+\fancyhead[C]{}
+\fancyhead[R]{}
+
+\fancyfoot[C]{\large \titre}
+\fancyfoot[L]{\large \@date}
+\fancyfoot[R]{
+			\begin{minipage}[b]{30mm}
+				\begin{flushright}
+					\large \thepage{}/\pageref*{LastPage}
+				\end{flushright}
+			\end{minipage}
+			}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+
+% style plain
+\fancypagestyle{plain}{%
+
+	\fancyhead[L]{\includegraphics[scale=0.6]{./images/Entete.png}\vspace{5mm}}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+	\fancyfoot[C]{\fontsize{16pt}{14pt} \large \titre}
+	\fancyfoot[L]{\fontsize{16pt}{14pt}\large \@date}
+	\fancyfoot[R]{
+				\begin{minipage}[b]{30mm}
+					\begin{flushright}
+						\large \thepage{}/\pageref*{LastPage}
+					\end{flushright}
+				\end{minipage}
+				}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{1pt}
+}
+
+
+\newcommand{\initIngeniance}{
+	\pagestyle{fancy}
+}
+
+
+% % PAGE DE TITRE
+
+% titleIngeniance : page de titre
+% #1 : descendre le titre du milieu (en mm)
+% #2 : lien de l'image de fond
+% #3 : décalage de l'image de fond de x = -#3 mm
+% #4 : décalage de l'image de fond de y = -#4 mm
+% #5 : taille de police du titre
+% #6 : taille de police du sous titre
+% A redefinir : \titre \soustitre \titre \soustitre \auteurs
+\newcommand\titleIngeniance[6]{
+\fontfamily{phv}
+	\makeatletter
+	\let\thetitle\@title        % Document title saved in command
+	\let\theauthor\@author      % Document author saved in command
+	\makeatother
+	
+	\newgeometry{left=2cm,right=2cm,bottom=2cm,top=2cm}
+
+	\begin{titlepage}
+		
+		\definecolor{INGENIANCE_PINK}{cmyk}{0,0.709,0.614,0.137}
+		\begin{picture}(183,250)(27,27)
+		\put(0,120){\includegraphics[width=215mm]{./images/ImagePageDAccueil.png}}
+		\put(10,265){\includegraphics[scale=1]{./images/Entete.png}}
+		\put(8,250){\includegraphics[scale=0.2]{./images/slogan.png}}
+		\put(145,25){
+			\begin{minipage}[c]{70mm} \begin{flushleft}
+			\textcolor{gray}{
+				\fontsize{13pt}{13pt}\selectfont \textbf{\textcolor{INGENIANCE_PINK}{\underline{IN}}GENIANCE\\ 54 Avenue du Général Leclerc \\ 92100 Boulogne-Billancourt \\ +33 (0)1 46 10 45 00\\ SAS RCS NANTERRE 48372613900031}}
+				\end{flushleft}
+			\end{minipage}}
+		%\put(5,150){\begin{minipage}[c]{150mm}\footnotesize  \rotatebox{90}{\textcolor{white}{#6}}\end{minipage}}
+		
+		% Infos Titre et sous titre
+		\put(25,80){\begin{minipage}[t]{180mm}\begin{flushleft}
+			\textcolor{gray}{
+				\fontsize{#5}{#5}\selectfont \textbf{\titre} \\
+				\vspace*{25pt}
+				\hspace{6mm}\fontsize{#6}{#6}\selectfont \textbf{\soustitre}\\
+				\vspace*{20pt}}
+			\end{flushleft}
+			\end{minipage}}
+
+		%Auteur
+		\put(33,15){\textcolor{gray}{\fontsize{20pt}{20pt}\textbf{\@author}}}
+
+
+		\end{picture}
+	\end{titlepage}
+	\restoregeometry
+	%%blank page
+	\clearpage
+}
+
+\makeatletter
+\let\old@part\@part
+\def\@part[#1]#2{\old@part[#1]{#2} \renewcommand{\parttitle}{#1}}
+\let\old@chapter\@chapter
+\def\@chapter[#1]#2{\old@chapter[#1]{#2} \thispagestyle{fancy} \renewcommand{\chaptertitle}{#1}}
+\makeatother
+
+\endinput
