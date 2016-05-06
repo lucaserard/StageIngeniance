@@ -106,11 +106,9 @@
 
 
 	}
-
-
-
-	//$jsonPage = file_get_contents('/home/lucas/Documents/Boulot/StageIngeniance/ScriptJSON/trello.json');
-	$jsonPage = file_get_contents('/home/lucas/StageIngeniance/ScriptJSON/ERP.json');	
+	
+	$url = '/home/lucas/StageIngeniance/ScriptJSON/ERP.json';
+	$jsonPage =  file_get_contents($url);
 	$trello = json_decode($jsonPage);
 	
 	$lists = $trello->{'lists'};
@@ -122,6 +120,7 @@
 	$stories = $trello->{'cards'};
 
 	$exportArray[]=array();
+	$exportArray[]=array("ID","Titre","Description","Membres","Macro-Processus",utf8_encode("Priorité"),"Liste","Conditions d'acceptation", "Date");
 	foreach ($stories as $story) {
 		if(!$story->{'closed'}){
 
