@@ -35,7 +35,12 @@ citecolor=black,  %couleur des références
 
 \usepackage{$Ingeniance/Ressources/templateIngenianceCentralise}
 
-\graphicspath{{$Ingeniance/Process/"Gestion des Affaires"/}}
+\graphicspath{
+			{"Gestion des Affaires"/}
+			{"Gestion des Temps"/}
+			{"Gestion de la Remuneration"/}
+			{"Gestion des Notes de Frais"/}
+			}
 
 
 \renewcommand\titre{Processus Ingéniance}
@@ -51,14 +56,17 @@ citecolor=black,  %couleur des références
 
 
 \titleIngeniance{0}{}{0}{150}{220}{}
-% \chapter{Gestion des temps}
+\chapter{Gestion des temps}
 
-% \input{$Ingeniance/Process/"Gestion des Temps"/Temps.tex}
-% \chapter{Gestion des Notes de Frais}
-% \input{$Ingeniance/Process/"Gestion des Notes de Frais"/NotesDeFrais.tex}
+\input{"Gestion des Temps"/Temps.tex}
+
+\chapter{Gestion de la rémunération}
+\input{"Gestion de la Remuneration"/Remuneration.tex}
+\chapter{Gestion des Notes de Frais}
+\input{"Gestion des Notes de Frais"/NotesDeFrais.tex}
 
 \chapter{Gestion des Affaires}
-\input{$Ingeniance/Process/"Gestion des Affaires"/Affaires.tex}
+\input{"Gestion des Affaires"/Affaires.tex}
 % \input{Affaires.tex}
 
 

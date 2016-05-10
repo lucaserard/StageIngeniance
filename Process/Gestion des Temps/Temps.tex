@@ -1,16 +1,28 @@
 \section{Demande de congé}
-On peut voir sur la figure \ref{conges} le workflow de demande de congés. 
+On peut voir sur la figure \ref{conges} le workflow de demande de congés. Une demande est issue d'un employé, consultant ou interne, et doit être validée, d'abord par son N+1 puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et peut modifier sa demande pour la soumettre à nouveau.
 \begin{figure}
-	\includegraphics[scale=0.2]{$Ingeniance/Process/"Gestion des Temps"/Diagrammes/DemandeCongeWF.pdf}
+	\includegraphics[scale=0.5]{Diagrammes/DemandeCongeWF.pdf}
 	\caption{Workflow de demande de congés}
 	\label{conges}
 \end{figure}
 
 \section{Saisie des temps}
 
-On peut voir sur la figure \ref{tps} le workflow de saisie des temps. 
+On peut voir sur la figure \ref{tps} le workflow de saisie des temps. En fin de mois, chaque consultant doit soumettre un rapport d'activité à son Manager dans lequel il indique le détail de ses journées de travail du mois. Ce comptre rendu d'activité, ou CRA, doit être validé par le Business Manager, puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et doit modifier et soumettre à nouveau son CRA jusqu'à validation.
 \begin{figure}
-	\includegraphics[scale=0.5]{$Ingeniance/Process/"Gestion des Temps"/Diagrammes/SaisieDesTempsWF.pdf}
+	\includegraphics[scale=0.5]{Diagrammes/SaisieDesTempsWF.pdf}
 	\caption{Workflow de saisie des temps}
 	\label{tps}
 \end{figure}
+
+
+\section{Gestion des relances}
+\paragraph{} On peut voir sur la figure \ref{relances} le processus de relance des consultants. Lorsque la fin du mois approche, chaque consultant reçoit un mail lui rappelant de soumettre son Compte Rendu d'activité pour le mois écoulé. À la suite de ce mail, une relance quotidienne est envoyée jusqu'à ce que le consultant ait soumis un CRA correctement complété. Si un certain temps s'écoule sans que le consultant ait soumis son CRA, cela sera impacté dans son bilan annuel.
+\begin{figure}
+	\includegraphics[scale=0.5]{Diagrammes/Relances.pdf}
+	\caption{Processus de relance des consultants sur les Rapports d'Activité}
+	\label{relances}
+\end{figure}
+
+
+
