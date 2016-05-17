@@ -66,197 +66,20 @@ citecolor=black,  %couleur des références
 
 % Parties
 \chapter{Relation RH}
-
-
-\paragraph{Intervenant}
-\begin{itemize}
-	\item Nom : Fatima Ghemougui
-	\item Email : fghemougui@horizontalsoftware.com
-	\item Téléphone fixe : 0153043236
-	\item Téléphone Portable : 0619950820  
-\end{itemize}
-
-\section{Offre de service}
-\paragraph{} Offre Saas ou on premises disponible. Offre Saas hébergée chez des entreprises externes (ex OVH)
-\paragraph{} Solution Web avec fonctionnement sous navigateur.
-
-\section{Gestion des offres}
-\paragraph{} Possibilité de poster les offres sur un site de recrutement intégré à notre site actuel, et adapté à notre charte graphique, ou bien en site externe. Front office candidat responsive.
-\paragraph{} Possibilité de créer un espace candidat pour permettre l’accès aux données (optionnel mais bien pour la CNIL).
-\paragraph{} Analyse sémantique Linkedin, Viadeo, Fichier pour remplir le formulaire côté candidat.
-\paragraph{} Les candidatures alimentent le vivier de CV.
-\paragraph{} Création d'annonce : champs à renseigner variés. Publication sur les job boards possible, mais utiliser Multiposting (entreprise) pour grande échelle (cher). Publication sur site. Possibilité d'un système d'alerte pour les candidatures sur les annonces urgentes.
-\paragraph{} Possibilité d'un WF de validation avant publication d'une annonce.
-
-
-\section{Gestion des candidatures}
-
-\paragraph{} Système d'infobulle via survol avec les infos intéressantes : paramétrable.
-\paragraph{} Fiche candidat affiche infos administratives, compétences et expériences + possibilité d'afficher le CV au format texte brut. Développement possible pour l'affichage CV en format original en parallèle sur la fiche candidat. 
-\paragraph{} Possibilité d'exporter un profil vers PDF (Problème d'encodage pendant la démo)
-\paragraph{} Workflow de gestion du candidat : Pas de gestion des statuts, uniquement des actions. Historique des actions disponibles. Dernière action affichable et filtrable dans le référentiel candidat et les résultats de recherche.
-\paragraph{} Écran d'affichage des "derniers ajouts" permet d'avoir accès aux derniers candidats importés.
-\paragraph{} Possibilité d'assigner un candidat à un recruteur via un champ et du filtrage sur les recherches (=non natif)
-
-
-
-\section{Communication}
-\paragraph{} Possibilité d'exporter les fiches au format PDF.
-\paragraph{} Possibilité de transmettre un candidat à un acteur non utilisateur de l'application et d'obtenir son retour sur le profil.
-\paragraph{} Possibilité de créer un CV Ingéniance à partir de la fiche candidat.
-
-
-\section{Recherche et matching}
-\paragraph{} Recherche réseaux sociaux, mais ouverture de navigateur avec bing search. Résultats pas super pertinents au premier abord, + manque d'ergonomie (affichage moteur de recherche web).
-\paragraph{} Matching avec les CV de la base au moment de la publication de l'annonce.
-
-
-
-\section{Import et intégration}
-\paragraph{} Import CV et création de fiche candidat : en Drag and drop. Import par une boite mail dispo. Logiciel TextKernel pour l'analyse sémantique (= LeaCV). 
-\paragraph{} Import SN géré par la page de recherche via bouton à coté du résultat.
-
-
-\section{Autres fonctionnalités} 
-\paragraph{Contrats de travail :} Développement prévu pour cet été.
-\paragraph{Fiches d'entretien}  Customizables pour les recruteurs.
-\paragraph{Statistiques} Reporting fait soit par Fiche de Poste, soit sur la BD entière avec requête personnalisable.
-\paragraph{Import Monster} Nécessité de passer par des solutions type Multiposting.
-\paragraph{Panier Candidat} Possibilité de se créer un panier candidat pour shortlister certains profils.
-
-\section{Projet}
-\paragraph{} Paramétrage sur environ 6 semaines.
-\paragraph{} Reprise des données prise en charge par Horizontal Software.
-\paragraph{} Volume de données ne pose pas de problème.
-
-
-% \section{Conclusion sur la solution}
-% \paragraph{} Solution couvre la plupart de nos besoins, en revanche gros défaut au niveau du workflow de recrutement. Prendre garde au
-
+\input{parties/RelationRH}
 
 \chapter{Talent Profiler}
-
-
-\paragraph{Intervenant}
-\begin{itemize}
-	\item Nom : Stéphane Chalençon
-	\item Email : stephane.chalencon@koltech.com
-	\item Téléphone fixe : 0175772472  
-\end{itemize}
-
-\section{Offre de service}
-\paragraph{} Full SaaS. Interface Web sur navigateur.
-\paragraph{} Actuellement en fin de version 2. La V3 serait disponible en juillet. Changement complet de technologie : passage de J2EE à PHP donc risque d'instabilité
-
-
-\section{Gestion des offres}
-
-\paragraph{} Intégration des offres au site : ouverture de WS pour récupérer les données, intégration dans le site à notre charge.
-\paragraph{} Diffusion sur les job boards bien gérée, mais absence de LesJeudis.
-
-\section{Gestion des candidatures}
-\paragraph{} Tableau de bord en page d'accueil, candidatures séparés par statut . Colonnes modulables.
-\paragraph{} Workflow actions/statuts bien géré, possibilité d'actions automatiques.
-\paragraph{} Possibilité de partage avec les recruteurs avec système d'alerte.
-\paragraph{} Distinction entre candidat et candidature : un candidat peut postuler plusieurs fois sans qu'une fiche candidat soit recréée, sauvegarde des différentes candidatures.
-\paragraph{} Affichage du CV sur le coté de la fiche candidat, au format source. CV images affichés même sans parsing.
-\paragraph{} Possibilité d'envoyer des candidatures à un non utilisateur, via un lien personnel donnant accès à un espace privé avec candidatures triés par poste/profil et possibilité de laisser des commentaires en plus de l'avis.
-
-
-\section{Communication}
-\paragraph{} Génération de CV et de documents pas disponible
-\paragraph{} Modèles d'email disponibles, mais pas sûr pour le publipostage.
-\paragraph{} Modèle SMS également, mais achat de packs SMS nécessaire. Programmation d'envoi SMS pas certaine.
-\paragraph{} Intégration avec outlook (mail + calendrier)
-\paragraph{} Communication de masse sur sélection de candidats dispo.
-\paragraph{} Partenariat d'envoi email transparent et compris dans le prix de vente (pas de limitation de volume).
-
-
-\section{Recherche et matching}
-\paragraph{} Pas de recherche sur les réseaux sociaux
-\paragraph{} Dictionnaire de synonymes sur les mots clés (paramétrable).
-
-
-\section{Intégration et import}
-\paragraph{} Import Linkedin et Viadeo fait sur navigateur, via plug-in : bien géré. 
-
-\section{Autres fonctionnalités}
-
-\paragraph{Reporting et statistiques :} Disponible mais moins personnalisable que Relation RH.
-
-
-
+\input{parties/Koltech.tex}
 
 \chapter{AD MEN}
+\input{parties/ADMen.tex}
 
-\paragraph{Intervenant}
-\begin{itemize}
-	\item Nom : François Housseau
-	\item Email : fhousseau@ad-rh.com
-	\item Téléphone fixe :
-\end{itemize}
-
-%---------------------------------------------------------------------------------------------------------------------------------------------
-
-\section{Offre de service}
-\paragraph{} On premises uniquement, outil windows.
-
-\paragraph{} Licence par utilisateur plutôt que par poste.
-\paragraph{} Application mobile et tablette  : ADMen Air
-\paragraph{Ouverture API} Données hébergées sur nos serveurs = BD requêtable directement. Possibilité de mise en place de vues SQL, de flux XML ou RSS (coûts supplémentaires)
-
-\section{Gestion des offres}
-\paragraph{} Création de fiches de poste basique
-\paragraph{} Intégration sur site Web à notre charge
-\paragraph{} AdMen Web Application intégrable au site.
-\paragraph{} Partenariat Multiposting, Broadbin et Talentplug (mais abonnements à notre charge)
-
-
-
-
-\section{Gestion des candidatures} 
-\paragraph{} Gestion par mission : liste de candidats, documents et annonces associés.
-\paragraph{} Workflow de recrutement très bien géré, actions et statuts personnalisables.
-\paragraph{} Gestion des profils : identification des doublons de candidatures
-\paragraph{} Affichage de la fiche candidat sans CV en parallèle.
-\paragraph{} Complétion des profils avec conflit de données très bien gérée.
-\paragraph{} Possibilité de créer des \textit{triggers} avec action à la clé.
-
-\section{Communication}
-\paragraph{} Envoi de candidatures à des commerciaux bien géré, soit par lien chiffré, soit sur leur compte. Possibilité de joindre CR d'entretien.
-\paragraph{Modèles de documents} Génération de documents avec publipostage possible sur un grand nombre de documents types. Entre autre CV et contrat de travail.
-\paragraph{} Mailing de masse disponible, avec modèles de mail et publipostage.
-
-
-\section{Import et intégration}
-\paragraph{} Parsing complet, manque les fichiers images.
-\paragraph{} Import FTP et mail disponibles.
-\paragraph{} Intégration Linkedin plus disponible, mais Viadeo bien gérée, avec recherche intégrée.
-
-
-\section{Autres fonctionnalités}
-\paragraph{Gestion des compétences} Organisation en arborescence : jusqu'à 4 niveaux de profondeur, ce qui permet de mettre en place des niveaux. Attention cependant, manque notion d'ordre entre les niveaux.
-\paragraph{Post it :} Possibilité de coller des post-it avec du texte sur tous les objets de l'application.
-\paragraph{Fonctionnalités CRM, chasse etc :} Système de création de société, liée à Corporama et , de rechercher tous les profils liés à une société sur plusieurs critères.
-\paragraph{Intégration partenaires :} \begin{itemize}
-	\item AssessFirst : Personnalité
-	\item EasyRecrue : questions vidéos
-	\item Insee : salaire cadres [à venir]
-	\item eTesting, Isograd : tests techniques
-	\item Corporama : infos sociétés
-	\item VerifDiploma
-\end{itemize}
-
-\paragraph{Modules supplémentaires :} Gestion des sociétés, des documents, de la facturation, de saisie des temps.
-
-\paragraph{Plugin MS} Intégration complète dans la suite MS : boutons sur tous les logiciels pour import/export etc, synchronisation outlook et plug-in IE (seul navigateur compatible).
+\chapter{Eolia}
+\input{parties/Eolia.tex}
 
 
 
 \chapter{Bilan provisoire}
-
-
-
 \section{Solution RH}
 
 \subsection{Points forts}
