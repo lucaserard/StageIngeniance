@@ -20,6 +20,8 @@
 \usepackage[final]{pdfpages}
 \usepackage{pslatex}
 \usepackage{rotating}
+\usepackage{longtable}
+\usepackage{colortbl}
 
 
 
@@ -54,8 +56,51 @@ citecolor=black,  %couleur des références
 % \makeatother
 
 
-
 \titleIngeniance{0}{}{0}{150}{220}{}
+
+\chapter{Introduction}
+
+\section{Terminologie et abréviations}
+\paragraph{} Le tableau \ref{abbr} liste et explicite tous les abréviations et acronymes utilisés dans le document.
+\begin{table}
+\begin{center}
+    \begin{longtable}{|p{0.2\linewidth}|p{0.75\linewidth}|}
+    \hline  % Une ligne horizontale
+    \rowcolor[gray]{.8}
+    Abréviation & Signification\\
+    \hline
+    BM & Business Manager\\
+    \hline
+    BU & Business Unit \\
+    \hline
+    CP & Congés Payés\\
+    \hline
+    CRA & Compte Rendu d'Activité\\
+    \hline
+    RMA & Rapport Mensuel d'Activité\\
+    \hline
+    \end{longtable}
+    \caption{Terminologie}
+    \label{abbr}
+\end{center}
+\end{table}
+
+\section{Remarques sur les schémas}
+\paragraph{} Le lecteur notera qu'à l'intérieur des diagrammes, les différents acteurs sont représentés par des boites, et non par des Pools et Lanes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \chapter{Gestion des temps}
 
 \input{"Gestion des Temps"/Temps.tex}
