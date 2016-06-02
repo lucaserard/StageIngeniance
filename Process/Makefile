@@ -4,6 +4,7 @@ all: general self
 self: 
 	#pdflatex "\def\current{$d}\input{ProcessusIngeniance.tex}" ;
 	#pdflatex "\def\current{$(pwd)}\input{ProcessusIngeniance.tex}" ;	
+	pdflatex ProcessusIngeniance.tex;	
 	pdflatex ProcessusIngeniance.tex;
 	pdflatex ProcessusIngeniance.tex;
 	-rm *.aux *.log *.out *.toc *.cb *.cb2

@@ -22,6 +22,9 @@
 \usepackage{rotating}
 \usepackage{longtable}
 \usepackage{colortbl}
+\usepackage{eurosym}
+ 
+
 
 
 
@@ -42,6 +45,7 @@ citecolor=black,  %couleur des références
 			{"Gestion des Temps"/}
 			{"Gestion de la Remuneration"/}
 			{"Gestion des Notes de Frais"/}
+            {Recrutement/}
 			}
 
 
@@ -57,12 +61,12 @@ citecolor=black,  %couleur des références
 
 
 \titleIngeniance{0}{}{0}{150}{220}{}
-
+\tableofcontents
 \chapter{Introduction}
 
 \section{Terminologie et abréviations}
 \paragraph{} Le tableau \ref{abbr} liste et explicite tous les abréviations et acronymes utilisés dans le document.
-\begin{table}
+\begin{table}[H]
 \begin{center}
     \begin{longtable}{|p{0.2\linewidth}|p{0.75\linewidth}|}
     \hline  % Une ligne horizontale
@@ -112,27 +116,10 @@ citecolor=black,  %couleur des références
 
 \chapter{Gestion des Affaires}
 \input{"Gestion des Affaires"/Affaires.tex}
+
+\chapter{Recrutement}
+\input{Recrutement/Recrutement.tex}
 % \input{Affaires.tex}
 
 
 \end{document}
-
-
-% \fancypagestyle{plain}{%
-
-% 		\fancyhead[L]{\includegraphics[scale=0.6]{$Ingeniance/Ressources/images/Entete.png}}
-% 		\fancyhead[C]{}
-% 		\fancyhead[R]{}
-% 		\fancyfoot[C]{\fontsize{16pt}{14pt} \large \titre}
-% 		\fancyfoot[L]{\fontsize{16pt}{14pt}\large \@date}
-% 		\fancyfoot[R]{
-% 					\begin{minipage}[b]{30mm}
-% 						\begin{flushright}
-% 							\large \thepage{}/\pageref*{LastPage}
-% 						\end{flushright}
-% 					\end{minipage}
-% 					}
-% 		\renewcommand{\headrulewidth}{0pt}
-% 		\renewcommand{\footrulewidth}{1pt}
-
-% 	}
