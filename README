@@ -23,8 +23,6 @@ Makefile des sous dossiers : 3 options :
 			clean : supprime les fichiers PDF du dossier et des diagrammes, plus les fichiers intermédiaires.
 all execute dia puis tex.
 
-Commit windows
-
 
 
 
