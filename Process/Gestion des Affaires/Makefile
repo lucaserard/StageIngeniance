@@ -16,4 +16,5 @@ dia:
 clean:
 	rm -f Diagrammes/*.eps
 	rm -f Diagrammes/*.pdf
-	rm -f *.pdf 
+	rm -f *.pdf
+	-rm -f Diagrammes/*.autosave

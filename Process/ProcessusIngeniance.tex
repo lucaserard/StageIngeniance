@@ -1,45 +1,7 @@
 \documentclass[12pt]{scrreprt}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{lmodern}
-\usepackage{textcomp}
-\usepackage[francais]{babel, varioref}
-\usepackage{graphicx}
-\usepackage{listings}
-\usepackage{xspace}
-\usepackage{amsmath}
-\usepackage{amssymb}
-\usepackage{calc}
-\usepackage{listingsutf8}
-\usepackage{color}
-\usepackage{xcolor}
-\usepackage{afterpage}
-% \usepackage[style=verbose-note,backend=bibtex]{biblatex}
-\usepackage{url}
-\usepackage[top=2.1cm,bottom=2.2cm,left=2cm,right=2cm]{geometry}
-\usepackage[final]{pdfpages}
-\usepackage{pslatex}
-\usepackage{rotating}
-\usepackage{longtable}
-\usepackage{colortbl}
-\usepackage{eurosym}
- 
+\input{packages}
 
-
-
-
-% Pour sommaire cliquable 
-\usepackage{hyperref} % Créer des liens et des signets
-\hypersetup{
-colorlinks=true, %colorise les liens
-breaklinks=true, %permet le retour à la ligne dans les liens trop longs
-urlcolor= blue, %couleur des hyperliens
-linkcolor= black, %couleur des liens internes
-citecolor=black,  %couleur des références
-}
-
-\usepackage{$Ingeniance/Ressources/templateIngenianceCentralise}
-
+%Ajouter le nom du dossier contenant le texte et les diagrammes liés à un nouveau macro process 
 \graphicspath{
 			{"Gestion des Affaires"/}
 			{"Gestion des Temps"/}
@@ -56,14 +18,21 @@ citecolor=black,  %couleur des références
 \date{Avril 2016}
 \begin{document}
 
-% \makeatletter
-% \def\input@path{{$Ingeniance/Process/"Gestion des Affaires}}
-% \makeatother
-
-
 \titleIngeniance{0}{}{0}{150}{220}{}
+
+%table des matières
 \tableofcontents
+
+\initIngeniance
+
+%--------------------------------------------------------------------------
+%intro
 \chapter{Introduction}
+
+\section{Présentation du document}
+\paragraph{} Le présent document a pour objectif de lister et d'expliciter les processus en œuvre dans la société Ingéniance.
+\paragraph{} Les processus sont représentés via la norme BPMN2.0 : l’enchaînement des différentes tâches est figuré via des boites reliées entre elles par des flèches. La modélisation implique également différents événements, par exemple des messages, ou des événements liés à un \textit{timer}.
+
 
 \section{Terminologie et abréviations}
 \paragraph{} Le tableau \ref{abbr} liste et explicite tous les abréviations et acronymes utilisés dans le document.
@@ -84,29 +53,16 @@ citecolor=black,  %couleur des références
     \hline
     DO & Direction des Opérations\\
     \hline
-    RMA & Rapport Mensuel d'Activité\\
-    \hline
     \end{longtable}
     \caption{Terminologie}
     \label{abbr}
 \end{center}
 \end{table}
 
-\section{Remarques sur les schémas}
-\paragraph{} Le lecteur notera qu'à l'intérieur des diagrammes, les différents acteurs sont représentés par des boites, et non par des Pools et Lanes.
 
 
-
-
-
-
-
-
-
-
-
-
-
+%------------------------------------------------------
+% ----------Process----------------------
 
 \chapter{Gestion des temps}
 
