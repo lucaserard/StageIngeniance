@@ -68,16 +68,16 @@
         <dia:point val="5.74324,10.8092"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="5.69324,10.7592;37.7602,17.0191"/>
+        <dia:rectangle val="5.69324,10.7592;38.8192,17.7937"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
         <dia:point val="5.74324,10.8092"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="31.966922898772154"/>
+        <dia:real val="33.025969456900796"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
-        <dia:real val="6.1599547168019377"/>
+        <dia:real val="6.93451010515086"/>
       </dia:attribute>
       <dia:attribute name="border_width">
         <dia:real val="0.10000000149011612"/>
@@ -182,7 +182,7 @@ des souhaits#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="13.9425,13.1136"/>
+            <dia:point val="13.9425,13.1137"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -249,19 +249,19 @@ des souhaits#</dia:string>
     </dia:object>
     <dia:object type="BPMN - Task" version="1" id="O4">
       <dia:attribute name="obj_pos">
-        <dia:point val="22.0806,12.2818"/>
+        <dia:point val="21.7246,12.2818"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="22.0306,12.2318;26.9879,14.4046"/>
+        <dia:rectangle val="21.6746,12.2318;27.344,14.4045"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="22.0806,12.2818"/>
+        <dia:point val="21.7246,12.2818"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
-        <dia:real val="4.8573529427542388"/>
+        <dia:real val="5.5694117662836531"/>
       </dia:attribute>
       <dia:attribute name="elem_height">
         <dia:real val="2.0727272743528555"/>
@@ -288,7 +288,7 @@ des souhaits#</dia:string>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Contact d'un
+            <dia:string>#Recherche d'un
 formateur#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
@@ -318,89 +318,18 @@ formateur#</dia:string>
         <dia:real val="1"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="BPMN - Task" version="1" id="O5">
+    <dia:object type="BPMN - End-Event" version="1" id="O5">
       <dia:attribute name="obj_pos">
-        <dia:point val="28.2862,12.282"/>
+        <dia:point val="36.0394,12.3193"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="28.2362,12.232;32.7938,14.4047"/>
+        <dia:rectangle val="35.9894,12.2693;38.0894,14.3693"/>
       </dia:attribute>
       <dia:attribute name="meta">
         <dia:composite type="dict"/>
       </dia:attribute>
       <dia:attribute name="elem_corner">
-        <dia:point val="28.2862,12.282"/>
-      </dia:attribute>
-      <dia:attribute name="elem_width">
-        <dia:real val="4.457647060401297"/>
-      </dia:attribute>
-      <dia:attribute name="elem_height">
-        <dia:real val="2.0727272743528555"/>
-      </dia:attribute>
-      <dia:attribute name="line_width">
-        <dia:real val="0.10000000149011612"/>
-      </dia:attribute>
-      <dia:attribute name="line_colour">
-        <dia:color val="#000000"/>
-      </dia:attribute>
-      <dia:attribute name="fill_colour">
-        <dia:color val="#ffffff"/>
-      </dia:attribute>
-      <dia:attribute name="show_background">
-        <dia:boolean val="true"/>
-      </dia:attribute>
-      <dia:attribute name="line_style">
-        <dia:enum val="0"/>
-        <dia:real val="1"/>
-      </dia:attribute>
-      <dia:attribute name="padding">
-        <dia:real val="0.10000000000000001"/>
-      </dia:attribute>
-      <dia:attribute name="text">
-        <dia:composite type="text">
-          <dia:attribute name="string">
-            <dia:string>#Planification
-de sessions#</dia:string>
-          </dia:attribute>
-          <dia:attribute name="font">
-            <dia:font family="sans" style="0" name="Helvetica"/>
-          </dia:attribute>
-          <dia:attribute name="height">
-            <dia:real val="0.80000000000000004"/>
-          </dia:attribute>
-          <dia:attribute name="pos">
-            <dia:point val="30.515,13.1183"/>
-          </dia:attribute>
-          <dia:attribute name="color">
-            <dia:color val="#000000"/>
-          </dia:attribute>
-          <dia:attribute name="alignment">
-            <dia:enum val="1"/>
-          </dia:attribute>
-        </dia:composite>
-      </dia:attribute>
-      <dia:attribute name="flip_horizontal">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="flip_vertical">
-        <dia:boolean val="false"/>
-      </dia:attribute>
-      <dia:attribute name="subscale">
-        <dia:real val="1"/>
-      </dia:attribute>
-    </dia:object>
-    <dia:object type="BPMN - End-Event" version="1" id="O6">
-      <dia:attribute name="obj_pos">
-        <dia:point val="34.501,12.3274"/>
-      </dia:attribute>
-      <dia:attribute name="obj_bb">
-        <dia:rectangle val="34.451,12.2774;36.551,14.3774"/>
-      </dia:attribute>
-      <dia:attribute name="meta">
-        <dia:composite type="dict"/>
-      </dia:attribute>
-      <dia:attribute name="elem_corner">
-        <dia:point val="34.501,12.3274"/>
+        <dia:point val="36.0394,12.3193"/>
       </dia:attribute>
       <dia:attribute name="elem_width">
         <dia:real val="2"/>
@@ -434,17 +363,19 @@ de sessions#</dia:string>
         <dia:real val="1"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Text" version="1" id="O7">
+    <dia:object type="Standard - Text" version="1" id="O6">
       <dia:attribute name="obj_pos">
-        <dia:point val="16.8861,15.4389"/>
+        <dia:point val="16.8861,15.3328"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.8861,14.8439;22.4686,15.5914"/>
+        <dia:rectangle val="16.8861,14.7378;22.4686,17.0853"/>
       </dia:attribute>
       <dia:attribute name="text">
         <dia:composite type="text">
           <dia:attribute name="string">
-            <dia:string>#Souhait récurrent#</dia:string>
+            <dia:string>#Souhait récurrent
+ou proposition
+ou souhait DO#</dia:string>
           </dia:attribute>
           <dia:attribute name="font">
             <dia:font family="sans" style="0" name="Helvetica"/>
@@ -453,7 +384,7 @@ de sessions#</dia:string>
             <dia:real val="0.80000000000000004"/>
           </dia:attribute>
           <dia:attribute name="pos">
-            <dia:point val="16.8861,15.4389"/>
+            <dia:point val="16.8861,15.3328"/>
           </dia:attribute>
           <dia:attribute name="color">
             <dia:color val="#000000"/>
@@ -467,7 +398,7 @@ de sessions#</dia:string>
         <dia:enum val="3"/>
       </dia:attribute>
     </dia:object>
-    <dia:object type="Standard - Line" version="0" id="O8">
+    <dia:object type="Standard - Line" version="0" id="O7">
       <dia:attribute name="obj_pos">
         <dia:point val="9.10441,13.2818"/>
       </dia:attribute>
@@ -498,12 +429,12 @@ de sessions#</dia:string>
         <dia:connection handle="1" to="O2" connection="8"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Line" version="0" id="O9">
+    <dia:object type="Standard - Line" version="0" id="O8">
       <dia:attribute name="obj_pos">
         <dia:point val="16.6756,13.3136"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="16.6253,12.9574;18.5518,13.681"/>
+        <dia:rectangle val="16.6254,12.9574;18.5518,13.681"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="16.6756,13.3136"/>
@@ -529,16 +460,16 @@ de sessions#</dia:string>
         <dia:connection handle="1" to="O3" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Line" version="0" id="O10">
+    <dia:object type="Standard - Line" version="0" id="O9">
       <dia:attribute name="obj_pos">
         <dia:point val="20.44,13.3221"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="20.3899,12.9579;22.1924,13.6815"/>
+        <dia:rectangle val="20.3898,12.9582;21.8364,13.6818"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
         <dia:point val="20.44,13.3221"/>
-        <dia:point val="22.0806,13.3182"/>
+        <dia:point val="21.7246,13.3182"/>
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
@@ -560,16 +491,16 @@ de sessions#</dia:string>
         <dia:connection handle="1" to="O4" connection="8"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Line" version="0" id="O11">
+    <dia:object type="Standard - Line" version="0" id="O10">
       <dia:attribute name="obj_pos">
-        <dia:point val="26.9379,13.3182"/>
+        <dia:point val="27.294,13.3182"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="26.8879,12.9565;28.398,13.6801"/>
+        <dia:rectangle val="27.244,12.9567;28.7437,13.6803"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
-        <dia:point val="26.9379,13.3182"/>
-        <dia:point val="28.2862,13.3183"/>
+        <dia:point val="27.294,13.3182"/>
+        <dia:point val="28.6319,13.3188"/>
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
@@ -588,19 +519,19 @@ de sessions#</dia:string>
       </dia:attribute>
       <dia:connections>
         <dia:connection handle="0" to="O4" connection="5"/>
-        <dia:connection handle="1" to="O5" connection="8"/>
+        <dia:connection handle="1" to="O13" connection="8"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Line" version="0" id="O12">
+    <dia:object type="Standard - Line" version="0" id="O11">
       <dia:attribute name="obj_pos">
-        <dia:point val="32.7438,13.3183"/>
+        <dia:point val="34.9637,13.3188"/>
       </dia:attribute>
       <dia:attribute name="obj_bb">
-        <dia:rectangle val="32.6936,12.9625;34.6128,13.6861"/>
+        <dia:rectangle val="34.9137,12.9572;36.1512,13.6808"/>
       </dia:attribute>
       <dia:attribute name="conn_endpoints">
-        <dia:point val="32.7438,13.3183"/>
-        <dia:point val="34.501,13.3274"/>
+        <dia:point val="34.9637,13.3188"/>
+        <dia:point val="36.0394,13.3193"/>
       </dia:attribute>
       <dia:attribute name="numcp">
         <dia:int val="1"/>
@@ -618,11 +549,11 @@ de sessions#</dia:string>
         <dia:real val="0.5"/>
       </dia:attribute>
       <dia:connections>
-        <dia:connection handle="0" to="O5" connection="5"/>
-        <dia:connection handle="1" to="O6" connection="6"/>
+        <dia:connection handle="0" to="O13" connection="5"/>
+        <dia:connection handle="1" to="O5" connection="6"/>
       </dia:connections>
     </dia:object>
-    <dia:object type="Standard - Text" version="1" id="O13">
+    <dia:object type="Standard - Text" version="1" id="O12">
       <dia:attribute name="obj_pos">
         <dia:point val="6.22955,16.2883"/>
       </dia:attribute>
@@ -653,6 +584,77 @@ de sessions#</dia:string>
       </dia:attribute>
       <dia:attribute name="valign">
         <dia:enum val="3"/>
+      </dia:attribute>
+    </dia:object>
+    <dia:object type="BPMN - Collapsed-Sub-Process" version="1" id="O13">
+      <dia:attribute name="obj_pos">
+        <dia:point val="28.6319,12.2825"/>
+      </dia:attribute>
+      <dia:attribute name="obj_bb">
+        <dia:rectangle val="28.5819,12.2325;35.0137,14.4052"/>
+      </dia:attribute>
+      <dia:attribute name="meta">
+        <dia:composite type="dict"/>
+      </dia:attribute>
+      <dia:attribute name="elem_corner">
+        <dia:point val="28.6319,12.2825"/>
+      </dia:attribute>
+      <dia:attribute name="elem_width">
+        <dia:real val="6.3317647074601204"/>
+      </dia:attribute>
+      <dia:attribute name="elem_height">
+        <dia:real val="2.0727272743528538"/>
+      </dia:attribute>
+      <dia:attribute name="line_width">
+        <dia:real val="0.10000000149011612"/>
+      </dia:attribute>
+      <dia:attribute name="line_colour">
+        <dia:color val="#000000"/>
+      </dia:attribute>
+      <dia:attribute name="fill_colour">
+        <dia:color val="#ffffff"/>
+      </dia:attribute>
+      <dia:attribute name="show_background">
+        <dia:boolean val="true"/>
+      </dia:attribute>
+      <dia:attribute name="line_style">
+        <dia:enum val="0"/>
+        <dia:real val="1"/>
+      </dia:attribute>
+      <dia:attribute name="padding">
+        <dia:real val="0.10000000000000001"/>
+      </dia:attribute>
+      <dia:attribute name="text">
+        <dia:composite type="text">
+          <dia:attribute name="string">
+            <dia:string>#Ajout formation
+dans le catalogue#</dia:string>
+          </dia:attribute>
+          <dia:attribute name="font">
+            <dia:font family="sans" style="0" name="Helvetica"/>
+          </dia:attribute>
+          <dia:attribute name="height">
+            <dia:real val="0.80000000000000004"/>
+          </dia:attribute>
+          <dia:attribute name="pos">
+            <dia:point val="31.7978,13.1188"/>
+          </dia:attribute>
+          <dia:attribute name="color">
+            <dia:color val="#000000"/>
+          </dia:attribute>
+          <dia:attribute name="alignment">
+            <dia:enum val="1"/>
+          </dia:attribute>
+        </dia:composite>
+      </dia:attribute>
+      <dia:attribute name="flip_horizontal">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="flip_vertical">
+        <dia:boolean val="false"/>
+      </dia:attribute>
+      <dia:attribute name="subscale">
+        <dia:real val="1"/>
       </dia:attribute>
     </dia:object>
   </dia:layer>
