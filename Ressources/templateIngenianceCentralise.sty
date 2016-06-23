@@ -28,10 +28,11 @@
 
 % % HEADER & FOOTER
 
-\newcommand{\parttitle}{}
-\newcommand{\chaptertitle}{}
-\renewcommand{\footrulewidth}{1pt}
+%\newcommand{\parttitle}{}
+%\newcommand{\chaptertitle}{}
+%\renewcommand{\footrulewidth}{1pt}
 \setlength{\unitlength}{1mm}
+
 
 
 
@@ -142,11 +143,11 @@
 	\clearpage
 }
 
-\makeatletter
-\let\old@part\@part
-\def\@part[#1]#2{\old@part[#1]{#2} \renewcommand{\parttitle}{#1}}
-\let\old@chapter\@chapter
-\def\@chapter[#1]#2{\old@chapter[#1]{#2} \thispagestyle{fancy} \renewcommand{\chaptertitle}{#1}}
-\makeatother
+%\makeatletter
+%\let\old@part\@part
+%\def\@part[#1]#2{\old@part[#1]{#2} \renewcommand{\parttitle}{#1}}
+%\let\old@chapter\@chapter
+%\def\@chapter[#1]#2{\old@chapter[#1]{#2} \thispagestyle{fancy} \renewcommand{\chaptertitle}{#1}}
+%\makeatother
 
 \endinput
