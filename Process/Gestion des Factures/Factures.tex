@@ -1,21 +1,19 @@
 \section{Émission et validation de factures}
 
-\paragraph{} La figure \ref{validationFactures} présente le workflow de validation des factures. Les factures sont générées par le Responsable Administratif, qui en contrôle la conformité pour les valider. La direction est ensuite notifiée, effectue un contrôle à son tour, et les valide. Le responsable administratif est notifié de la validation et peut envoyer les factures aux clients.
-
-
+\paragraph{} La figure \ref{validationFactures} présente le workflow de validation des factures. Les factures sont générées par le Responsable Administratif, qui en contrôle la conformité pour les valider. Elles passent ensuite par la Direction pour une nouvelle validation. Elles sont finalement envoyées au client par le responsable administratif, après renseignement de la date d'envoi dans les données de suivi.
 	
 \begin{figure}
 	\centering
 	\begin{sideways}
-		\includegraphics[scale=0.5]{Diagrammes/FacturesWF.pdf}
+		\includegraphics[scale=0.5]{Diagrammes/FacturesATU.pdf}
 	\end{sideways}
 	\caption{Émission de factures}
 	\label{validationFactures}	
 \end{figure}
 
-\section{Factures et régulation ATG}
+\section{Factures mensuelles en ATG}
 \paragraph{} La figure \ref{facturesATG} présente le processus d'émission et de régulation des factures ATG. Chaque mois, le reponsable Administratif reçoit du client les prévisions pour le mois suivant. Des factures sont générées et complétées à partir de ces prévisions. Ce sous processus est détaillé sur la figure \ref{previsionnelATG}.
-\paragraph{} Au bout d'un temps variable selon les clients, le responsable administratif émet des factures de régulation à partir des temps effectifs des consultants.   
+\paragraph{} Au bout d'un temps variable selon les clients, une campagne de régularisation est initiée par le client.    
 
 \begin{figure}
 	\centering
@@ -33,8 +31,25 @@
 		\includegraphics[scale=0.4]{Diagrammes/FacturesPrevisionnelles.pdf}
 	% \end{sideways}
 	\caption{Émission de factures prévisionnelles}
-	\label{validationFactures}	
+	\label{previsionnelATG}	
 \end{figure}
+
+
+\section{Régularisation en ATG}
+
+\paragraph{} La figure \ref{regulATG} montre le processus d'établissement des régularisation en ATG. Le client lance une campagne de régularisation et prend contact avec le Responsable Administratif. Une rencontre est organisée, au cours de laquelle sont discutés les écarts entre les prévisions et les temps effectifs ainsi que les litiges sur les temps effectués. La Direction des Opérations effectue ensuite une mise à jour des données de suivi de chaque lot.
+\paragraph{} Les donneurs d'ordre côté client génèrent ensuite chacun une FGC de régularisation, qu'ils envoient au RA. Lorsque celui ci les reçoit, il peut générer les factures de régularisation. Ces factures sont ensuites validées et envoyées au client.
+
+
+\begin{figure}
+	\centering
+	% \begin{sideways}
+		\includegraphics[scale=0.4]{Diagrammes/RegularisationsATG.pdf}
+	% \end{sideways}
+	\caption{Régularisations en ATG}
+	\label{regulATG}	
+\end{figure}	
+
 
 
 \section{Gestion des litiges}
@@ -42,7 +57,7 @@
 
 
 \section{Refacturation des notes de frais}
-\paragraph{} la figure \ref{NDFRefacturables} montre le processus de refacturation des notes de frais. Lorsqu'une note de frais refacturable est validée, le Responsable Administratif génère une facture à partir de cette NDF. S'ensuit une validation administrative, puis une validation de la Direction. En dernier lieu, la facture est envoyée au client.
+\paragraph{}La figure \ref{NDFRefacturables} montre le processus de refacturation des notes de frais. Lorsqu'une note de frais refacturable est validée, le Responsable Administratif génère une facture à partir de cette NDF. S'ensuit une validation administrative, puis une validation de la Direction. En dernier lieu, la facture est envoyée au client.
 
 
 \begin{figure}
@@ -57,8 +72,7 @@
 
 \section{Monitoring des DSO et CA client}
 
-\paragraph{} La figure \ref{monitoringCO} présente le processus de monitoring des \textit{cuts off} client (DSO et CA). Le responsable financier extrait les données depuis ses outils métiers, les visualise, et peut ensuite en tenir compte pour les mois à venir.
-
+\paragraph{} La figure \ref{monitoringCO} présente le processus de monitoring des \textit{cuts off} client (DSO et CA). Le responsable financier extrait les données depuis ses outils métiers, les visualise, et peut ensuite mettre en place des actions si nécessaire.
 
 \begin{figure}
 	\centering
