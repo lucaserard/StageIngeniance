@@ -31,17 +31,71 @@
 	\label{accesCE}	
 \end{figure}
 
-\section{Gérer les données employé}
+\section{Gérer les données de rémunération}
 
-\paragraph{}La figure \ref{MAJDonneesRH} montre le process de gestion des données RH. Lorsque le RA reçoit d'un employé une notification de changement de situation, il met à jour les données RH pour refléter ce changement.
+\paragraph{}La figure \ref{MAJDonneesRH} montre le process de gestion des données RH de rémunération. Lorsqu'un Manager veut modifier le salaire d'un de ses N-1, au sortir d'un bilan annuel par exemple, il peut en faire la demande, qui doit être validée par la Direction.
 
 
 
 \begin{figure}
 	\centering
 	% \begin{sideways}
-	\includegraphics[scale=0.7]{Diagrammes/MAJDonneesRH.pdf}
+	\includegraphics[scale=0.5]{Diagrammes/MAJDonneesRem.pdf}
 	% \end{sideways}
-	\caption{Gestion des données employé}
-	\label{MAJDonneesRH}	
+	\caption{Mise à jour des données de rémunération}
+	\label{MAJDonneesRH}
+\end{figure}
+
+
+
+
+\section{Gérer l'arrivée d'un nouveau collaborateur}
+
+\paragraph{} La figure \ref{easyCome} montre le processus de gestion de l'arrivée d'un nouveau collaborateur.
+\paragraph{} Le responsable administratif lui remet tout d'abord un guide d'arrivée. Il lui demande ensuite ses documents administratifs (carte identité/carte séjour, copie diplôme, carte sécu, etc), puis crée et lui communique ses accès CE, et organise la visite médicale.
+\paragraph{} Dans le même temps, la Direction des Opération crée un compte ERP pour le collaborateur, et importe ses données candidat de l'ATS. Si le collaborateur est un consultant, la DO lui transmet les instructions pour qu'il renseigne ses compétences dans la cartographie de l'entreprise.\\
+Dans le cas d'un interne, la DO fait une demande de création d'un compte sur le domaine Ingéniance, crée un compte sur l'ATS s'il s'agit d'un recruteur, ainsi qu'un compte sur l'application de test si il s'agit d'un recruteur, commercial ou bien opérationnel. 
+
+\begin{figure}
+	\centering
+	\begin{sideways}
+	\includegraphics[scale=0.3]{Diagrammes/NouvelArrivant.pdf}
+	\end{sideways}
+	\caption{Gestion de l'arrivée d'un collaborateur}
+	\label{easyCome}	
+\end{figure}
+
+
+
+\section{Gérer le départ d'un collaborateur}
+
+\paragraph{} La figure \ref{easyGo}  montre le processus de gestion du départ d'un collaborateur.
+\paragraph{} Le responsable administratif met à jour les données RH de l'employé en renseignant sa date de départ, désactivant par là même son accès ERP. Il révoque ensuite son accès CE et son inscription à la mutuelle Ingéniance. Si le collaborateur est un consultant, le RA met également à jour les données de l'affaire sur laquelle il était affecté., ainsi que sa fiche mission. 
+\paragraph{} S'il s'agit d'un interne, la DO supprime dans le même temps son compte sur le domaine, désactive celui sur l'ATS s'il s'agit d'un recruteur ainsi que celui l'application de test si il s'agit d'un recruteur, commercial ou bien opérationnel. 
+
+
+\begin{figure}
+	\centering
+	\begin{sideways}
+	\includegraphics[scale=0.45]{Diagrammes/DepartCollaborateur.pdf}
+	\end{sideways}
+	\caption{Gestion du départ d'un collaborateur}
+	\label{easyGo}	
+\end{figure}
+
+
+
+
+\section{Valider les commentaires RH}
+
+\paragraph{} La figure \ref{fichesRH} montre le processus de contrôle des remarques sur les fiches RH. Chaque mois, le N+2 vérifie les fiches remplies par ses N-1, afin de vérifier qu'elles ne contiennent pas de remarques contraires à l'éthique et à l'esprit de l'entreprise.
+
+
+\begin{figure}
+	\centering
+	% \begin{sideways}
+	\includegraphics[scale=0.6]{Diagrammes/ControleFichesRH.pdf}
+	% \end{sideways}
+	\caption{Validation des fiches RH}
+	\label{fichesRH}	
 \end{figure}

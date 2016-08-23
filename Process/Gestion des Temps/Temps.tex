@@ -1,5 +1,5 @@
 \section{Demande d'absence}
-On peut voir sur la figure \ref{conges} le workflow de demande d'absences. Une demande est issue d'un employé, consultant ou interne, et doit être validée, d'abord par son N+1 puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et peut modifier sa demande pour la soumettre à nouveau.
+On peut voir sur la figure \ref{conges} le workflow de demande d'absences. Une demande est issue d'un employé, consultant ou interne, et doit être validée, d'abord par son N+1 puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et peut modifier sa demande pour la soumettre à nouveau. Une notification est également envoyée à l'employé à la validation de sa demande.
 \begin{figure}
 	\centering
 	\begin{sideways}
@@ -11,7 +11,7 @@ On peut voir sur la figure \ref{conges} le workflow de demande d'absences. Une d
 
 \section{Saisie des temps}
 
-On peut voir sur la figure \ref{tps} le workflow de saisie des temps. En fin de mois, chaque consultant doit soumettre un rapport d'activité à son Manager dans lequel il indique le détail de ses journées de travail et ses absences du mois. Ce comptre rendu d'activité, ou CRA, doit être validé par le Business Manager, puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et doit modifier et soumettre à nouveau son CRA jusqu'à validation.
+On peut voir sur la figure \ref{tps} le workflow de saisie des temps. En fin de mois, chaque consultant doit soumettre un rapport d'activité, avec les pièces jointes nécessaires, à son Manager dans lequel il indique le détail de ses journées de travail et ses absences du mois. Ce comptre rendu d'activité, ou CRA, doit être validé par le Business Manager, puis par le responsable administratif. À chaque étape du processus, l'employé est averti en cas de refus et doit modifier et soumettre à nouveau son CRA jusqu'à validation.
 \begin{figure}
 	\centering
 	\begin{sideways}
@@ -32,4 +32,14 @@ On peut voir sur la figure \ref{tps} le workflow de saisie des temps. En fin de 
 \end{figure}
 
 
+\section{Gestion des arrêts maladie}
+\paragraph{} La figure \ref{maladie} le processus de gestion des arrêts maladie. Un employé malade doit contacter son manager, faire une demande d'arrêt maladie, puis envoyer son certificat médical.
+\paragraph{} Toutes les 24h jusqu'à recevoir le certificat médical, le Responsable Administratif relance l'employé. Si 72h s'écoulent sans réception du certificat, l'arrêt maladie est déclaré absence injustifiée.
+
+\begin{figure}
+\centering
+	\includegraphics[scale=0.5]{Diagrammes/CongesMaladie.pdf}
+	\caption{Processus de gestion des arrêts maladie}
+	\label{maladie}
+\end{figure}
 
